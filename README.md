@@ -37,4 +37,4 @@ We will leverage ADX native Logic Apps integration via [Conditional Queries](htt
 
 ###Conceptual Monitoring Arquitecture
 
-![ADX Monitoring.jpg](/.attachments/ADX%20Monitoring-5a4e49ae-4476-43bb-b965-627133355f1b.jpg)
+<IMG  src="https://github.com/jlrevilla/monitoringsolution/blob/main/ADX%20Monitoring.jpg"  alt="ADX Monitorng"/>
