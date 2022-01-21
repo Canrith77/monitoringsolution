@@ -1,13 +1,8 @@
-**Requirement** 
-An end-to-end comprehensive monitoring solution will support the MC environment, providing extensive alerting and reporting capabilities.
-
-[[_TOC_]]
-
-###Objectives
+Objectives
 - Centralized solution to enable proactive alerts after the collection of event and diagnostics data from multiple resources
 - Different ingestion methods depending on the export/integration capabilities of source and destination
 
-###Ingestion paths
+Ingestion paths
 Depending on the workload, three different paths have been identified:
 
 1. Log Analytics export for [supported Azure workloads](https://docs.microsoft.com/en-us/azure/azure-monitor/monitor-reference#azure-supported-services) to Azure Event Hub and [into Azure Data Explorer](https://docs.microsoft.com/en-us/azure/data-explorer/ingest-data-no-code?tabs=diagnostic-logs).
@@ -29,12 +24,12 @@ Whenever we have these alternatives, we are leaning on using Event Hubs, both fo
 
 Log filtering will be handled by ingesting all logs into an ADX staging/raw table and using an update policy to filter data to be stored in a final destination table. Data retention policy for the staging/raw table is 0 days so its only used as a hop to filter data.
 
-###Alerts
+Alerts
 
 We will leverage ADX native Logic Apps integration via [Conditional Queries](https://docs.microsoft.com/en-us/azure/data-explorer/flow-usage#conditional-queries)
 
 <IMG  src="https://docs.microsoft.com/en-us/azure/data-explorer/media/flow-usage/flow-conditionactions.png"  alt="Adding actions for when a condition is true or false, flow conditions based on Kusto query results, Azure Data Explorer"/>
 
-###Conceptual Monitoring Arquitecture
+Conceptual Monitoring Arquitecture
 
 <IMG  src="https://github.com/jlrevilla/monitoringsolution/blob/main/ADX%20Monitoring.jpg"  alt="ADX Monitorng"/>
